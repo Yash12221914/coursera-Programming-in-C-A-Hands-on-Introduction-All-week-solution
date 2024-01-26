@@ -1,0 +1,1572 @@
+question 5
+
+if ((x == "a") || (x == "e") || (x == "i") || (x == "o") || (x == "u")) {
+  cout << x + " is a vowel";
+}
+else {
+  cout << x + " is not a vowel";
+}
+
+
+-------------------------------------------------------
+
+question 4
+
+if ((x == "red") || (x == "blue") || (x == "yellow")) {
+  cout << x + " is a primary color";
+}
+else {
+  cout << x + " is not a primary color";
+}
+-----------------------------------------------------
+question 3
+
+if ((x % 5 == 0) && (x % 2 == 0)) { 
+  cout << to_string(x) + " is divisible by 5 and even";
+}
+else {
+  cout << to_string(x) + " is not divisible by 5 or it is odd";
+}
+----------------------------------------------------
+question 2
+
+if (x % 5 == 0) { 
+  cout << to_string(x) + " is divisible by 5";
+}
+else {
+  cout << to_string(x) + " is not divisible by 5";
+}
+
+----------------------------------------------
+question 1
+
+
+if (((x >= 0) && (x <= 25)) || ((x >= 75) && (x <= 100))) { 
+  cout << to_string(x) + " is between 0 and 25 or 75 and 100"; 
+}
+
+
+----------------------------------------------------------------------------week 4-------------------------
+
+
+question 5
+
+for (int i = 1; i < 6; i++) {
+  for (int j = 5 - i; j > 0; j--) {
+    cout << ".";
+  }
+  cout << i << endl;
+}
+
+//-------------------------------------------------------
+//question 4
+
+for (int i = 100; i <= 100; i--) {
+  if (i == 0) {
+    cout << "Print me!" << endl;
+    break;
+  }
+  else {
+    while (true) {
+      break;
+      i++;
+      cout << "Don't print me!" << endl;
+    }
+  }
+}
+
+//-----------------------------------------------------
+//question 3
+
+int sum = 0;
+  
+for (int iter = a; iter <= b; iter++) {
+  sum += iter;
+}
+  
+if (a == b) {
+  sum = a;
+}
+  
+cout << sum << endl;
+
+//----------------------------------------------------
+//question 2
+
+for (int i = 0; i < 10; i++) {
+  cout << x << endl;
+}
+
+//----------------------------------------------
+//question 1
+
+for(int i = 0; i < 3; i++) {
+  tina.forward(100);
+  tina.left(120);
+}
+
+//=========================================================Module 2===============================================================================================================
+
+
+//----------------------------------------------------------------------------week 1------------------------------------------------
+
+
+question 5
+
+for (int i = 0; i < numList.size(); i++) {
+  total += numList.at(i);
+  avg = total / numList.size();
+}
+
+-------------------------------------------------------
+question 4
+
+nums[0][0] = a;
+nums[0][1] = b;
+nums[0][2] = a + b;
+nums[1][0] = c;
+nums[1][1] = d;
+nums[1][2] = c + d;
+nums[2][0] = a + c;
+nums[2][1] = b + d;
+nums[2][2] = ((a+b) + (c+d) + (a+c) + (b+d)); //or 2(a+b+c+d)
+
+-----------------------------------------------------
+question 3
+
+reverse.push_back(argv[3]);
+reverse.push_back(argv[2]);
+reverse.push_back(argv[1]);
+reverse.erase(reverse.begin());
+reverse.erase(reverse.begin());
+reverse.erase(reverse.begin());
+
+----------------------------------------------------
+question 2
+
+oceans.push_back("Pacific");
+oceans.push_back("Atlantic");
+oceans.push_back("Indian");
+oceans.push_back("Arctic");
+oceans.push_back("Southern");
+oceans.push_back("Place Holder");
+oceans.at(5) = "Delete";
+oceans.pop_back();
+
+----------------------------------------------
+question 1
+
+for (int i = 0; i < sizeof(oceans)/sizeof(oceans[0]); i++) {
+  cout << oceans[i] << endl;
+}
+
+----------------------------------------------------------------------------week 2---------------------------------------
+
+
+----------------------------------------------------
+question 2
+
+p1 = &a;
+p2 = &b;
+  
+cout << "The sum is ";
+
+----------------------------------------------
+question 1
+
+if (*p1 > *p2) {
+  cout << "The larger number is " << *p1 << endl;
+}
+  
+else if (*p1 < *p2) {
+  cout << "The larger number is " << *p2 << endl;
+}
+  
+else {
+  cout << "Neither number is larger" << endl;
+}
+
+----------------------------------------------------------------------------week 3-------------------------------------
+
+
+question 5
+
+for (int i = 0; i < my_string.length(); i++) {
+  if (i % 2 == 0) {
+    cout << my_string.at(i + 1);
+  }
+  else {
+    cout << my_string.at(i - 1);
+  }
+}
+
+-------------------------------------------------------
+question 4
+
+int mid = my_string.length() / 2;
+
+for (int i = 0; i < mid; i++) {
+  cout << my_string.at(i);
+}
+cout << endl;
+
+for (int j = mid; j < my_string.length(); j++) {
+  cout << my_string.at(j);
+}
+cout << endl;
+
+-----------------------------------------------------
+question 3
+
+for (char ch : original) {
+  if (isupper(ch)) {
+    modified += 'u';
+  }
+  else if (islower(ch)) {
+    modified += 'l';
+  }
+  else {
+    modified += '-';
+  }
+}
+    
+cout << original << endl;
+cout << modified << endl;
+
+----------------------------------------------------
+question 2
+
+for (int i = 0; i < my_string.length(); i++) {
+  for (int j = 0; j < my_string.length(); j++) {
+    if (j == my_string.length()-1) {
+      cout << my_string << endl;
+    }
+    else {
+      cout << my_string;
+    }
+  }
+}
+
+----------------------------------------------
+question 1
+
+char first = my_string.at(0);
+char last = my_string.at(my_string.length()-1);
+
+cout << first << " is the first character and " << last << " is the last character" << endl;
+
+----------------------------------------------------------------------------week 4-----------------------------------------------
+
+
+question 5
+
+vector<string> data;
+
+try {
+  ifstream file;
+  string read;
+  file.open(path);
+  if (!file) {
+    throw runtime_error("File failed to open.");
+  }
+  while (getline(file, read)) {
+    stringstream ss(read);
+    while (getline(ss, read, ',')) {
+      data.push_back(read);
+    }
+  }
+  file.close();
+}
+  
+catch (exception& e) {
+  cerr << e.what() << endl;
+}
+  
+string cities;
+cout << "The following cities are in the Southern Hemisphere: ";
+  
+for (int i = 6; i < data.size(); i+=4) {
+  if (stoi(data.at(i)) < 0) {
+    cities += (data.at(i - 2) + ", ");
+  }
+}
+  
+cities.pop_back();
+cities.pop_back();
+cities += ".";
+  
+cout << cities;
+
+-------------------------------------------------------
+question 4
+
+vector<string> data;
+
+try {
+  ifstream file;
+  string read;
+  file.open(path);
+  if (!file) {
+    throw runtime_error("File failed to open.");
+  }
+  while (getline(file, read)) {
+    stringstream ss(read);
+    while (getline(ss, read, '\t')) {
+      data.push_back(read);
+    }
+  }
+  file.close();
+}
+  
+catch (exception& e) {
+  cerr << e.what() << endl;
+}
+  
+int max = 0;
+string person;
+  
+for (int i = 1; i < data.size(); i+=3) {
+  if (stoi(data.at(i)) > max) {
+    max = stoi(data.at(i));
+    person = data.at(i - 1);
+  }
+}
+  
+cout << "The oldest person is " << person << ".";
+
+-----------------------------------------------------
+question 3
+
+vector<string> data;
+
+try {
+  ifstream file;
+  string read;
+  file.open(path);
+  if (!file) {
+    throw runtime_error("File failed to open.");
+  }
+  while (getline(file, read)) {
+    stringstream ss(read);
+    while (getline(ss, read)) {
+      data.push_back(read);
+    }
+  }
+  file.close();
+}
+  
+catch (exception& e) {
+  cerr << e.what() << endl;
+}
+  
+for (int i = data.size() - 1; i >= 0; i--) {
+  cout << data.at(i) << endl;
+}
+
+----------------------------------------------------
+question 2
+
+vector<string> data;
+
+try {
+  ifstream file;
+  string read;
+  file.open(path);
+  if (!file) {
+    throw runtime_error("File failed to open.");
+  }
+  while (getline(file, read)) {
+    stringstream ss(read);
+    while (getline(ss, read, ',')) {
+      data.push_back(read);
+    }
+  }
+  file.close();
+}
+  
+catch (exception& e) {
+  cerr << e.what() << endl;
+}
+  
+int col1 = 0;
+int col2 = 0;
+int col3 = 0;
+int col4 = 0;
+for (int i = 0; i < data.size(); i++) {
+  if (i == 0 || i == 4 | i == 8) {
+    col1 += stoi(data.at(i));
+  }
+  if (i == 1 || i == 5 | i == 9) {
+    col2 += stoi(data.at(i));
+  }
+  if (i == 2 || i == 6 | i == 10) {
+    col3 += stoi(data.at(i));
+  }
+  if (i == 3 || i == 7 | i == 11) {
+    col4 += stoi(data.at(i));
+  }
+}
+  
+cout << col1 / 3 << " ";
+cout << col2 / 3 << " ";
+cout << col3 / 3 << " ";
+cout << col4 / 3;
+
+----------------------------------------------
+question 1
+
+try {
+  ifstream file;
+  string read;
+  int lines = 0;
+  int chars = 0;
+  file.open(path);
+  if (!file) {
+    throw runtime_error("File failed to open.");
+  }
+  while (getline(file, read)) {
+    lines++;
+    chars += read.length();
+  }
+  file.close();
+  cout << lines << " line(s)" << endl;
+  cout << chars << " character(s)"; 
+}
+  
+catch (exception& e) {
+  cerr << e.what() << endl;
+}
+
+===================================================================================Module 3===============================================================================
+
+--------------------------------------week 1------------------------
+question 5
+
+bool IsPalindrome(string x) {
+  bool palindrome = false;
+  if (x == (Reverse(x))) {
+    palindrome = true;
+  }
+  return palindrome;
+}
+
+-------------------------------------------------------
+question 4
+
+bool IsPalindrome(string x) {
+  bool palindrome = false;
+  string y;
+  for (int i = x.length() - 1; i >= 0; i--) {
+    y += x.at(i);
+  }
+  if (x == y) {
+    palindrome = true;
+  }
+  return palindrome;
+}
+
+-----------------------------------------------------
+question 3
+
+bool FindTerm(string x, vector<string>& y) {
+  bool b = false;
+  for (auto a : y) {
+    if (a == x) {
+      b = true;
+    }
+  }
+  return b;
+}
+
+----------------------------------------------------
+question 2
+
+void GetOddsEvens(string x, vector<int>& y) {
+  if (x == "true") {
+    for (auto a1 : y) {
+      if (a1 % 2 == 0) {
+        cout << a1 << endl;
+      }
+    }
+  }
+  if (x == "false") {
+    for (auto a2 : y) {
+      if (a2 % 2 == 1) {
+        cout << a2 << endl;
+      }
+    }
+  }
+}
+
+----------------------------------------------
+question 1
+
+double GetAvg(double x, double y) {
+  return (x + y) / 2;
+}
+
+--------------------------------------week 2------------------------
+question 5
+
+int GetMax(vector<int>& nums) {
+  if (nums.size() == 1) {
+    return nums.at(0);
+  }
+  else {
+    vector<int> new_vector(nums.begin() + 1, nums.begin() + nums.size());
+    return max(nums.at(0), GetMax(new_vector));
+  }
+}
+
+-------------------------------------------------------
+question 4
+
+string ReverseString(string s) {
+  if (s.length() == 1) {
+    return s;
+  }
+  else {
+    return s.substr(s.length() - 1) + ReverseString(s.substr(0, s.length() - 1));
+  }
+}
+
+-----------------------------------------------------
+question 3
+
+int BunnyEars(int n) {
+  if (n == 0) {
+    return 0;
+  }
+  else {
+    return 2 + BunnyEars(n - 1);
+  }
+}
+
+----------------------------------------------------
+question 2
+
+int ListSum(vector<int>& nums) {
+  if (nums.size() == 1) {
+    return nums.at(0);
+  }
+  else {
+    vector<int> new_vector(nums.begin() + 1, nums.begin() + nums.size());
+    return nums.at(0) + ListSum(new_vector);
+  }
+}
+
+----------------------------------------------
+question 1
+
+int RecursiveSum(int n) {
+  if (n == 0) {
+    return 0;
+  }
+  else {
+    return n + RecursiveSum(n - 1);
+  }
+}
+
+--------------------------------------week 3------------------------
+question 5
+
+BigCat snow_leopard("uncia", "snow leopard", {"Himalaya mountains", "Siberian mountains"});
+
+-------------------------------------------------------
+question 4
+
+class Observation {
+  public:
+    string date;
+    double temperature;
+    double elevation;
+    int penguins;
+    double precipitation = 0;
+  
+  Observation(string d, double t, double e, int p) {
+    date = d;
+    temperature = t;
+    elevation = e;
+    penguins = p;
+  }
+};
+
+-----------------------------------------------------
+question 3
+
+class Superhero {
+  public:
+    string name;
+    string identity;
+    vector<string> powers;
+  
+  Superhero(string n, string id, vector<string> p) {
+    name = n;
+    identity = id;
+    powers = p;
+  }
+};
+
+----------------------------------------------------
+question 2
+
+class Cat {
+  public:
+    string breed;
+    string color;
+    string name;
+  
+  Cat() {
+    breed = "American Shorthair";
+    color = "black";
+    name = "Kiwi";
+  }
+};
+
+----------------------------------------------
+question 1
+
+class PracticeClass {
+  public:
+    string name;
+};
+
+--------------------------------------week 4------------------------
+question 5
+
+#include <iostream>
+using namespace std;
+
+//add class definitions below this line
+
+class Subway {
+  public:
+    Subway() {
+      passengers = 0;
+      total_fares = 0;
+    }
+    int GetPassengers() {
+      return passengers;
+    }
+    void Board(int p) {
+      if (p >= 0) {
+        passengers += p;
+        CalculateFares(p);
+      }
+    }
+    void Disembark(int p) {
+      if (p >= 0) {
+        if (passengers - p < 0) {
+          passengers = 0;
+        }
+        else {
+          passengers -= p;
+        }
+      }
+    }
+    double GetFares() {
+      return total_fares;
+    }
+    
+  private:
+    const double fare = 2.40; //variable cannot be reassigned
+    int passengers;
+    double total_fares;
+
+    void CalculateFares(int p) { //private helper class function
+      total_fares += p * fare;
+    }
+};
+
+//add class definitions above this line   
+
+int main() {
+  
+  //DO NOT EDIT code below this line
+
+  Subway s;
+  cout << s.GetPassengers() << endl;
+  s.Board(23);
+  s.Disembark(12);
+  cout << s.GetPassengers() << endl;
+  cout << s.GetFares() << endl;
+
+  //DO NOT EDIT code above this line
+  
+  return 0;
+  
+}
+
+-------------------------------------------------------
+question 4
+
+#include <iostream>
+using namespace std;
+
+//add class definitions below this line
+
+class MarbleBag {
+  public:
+    MarbleBag(int r, int b, int y) {
+      red = r;
+      blue = b;
+      yellow = y;
+    }
+    int AddRed(int amount) {
+      return red += amount;
+    }
+    int AddBlue(int amount) {
+      return blue += amount;
+    }
+    int AddYellow(int amount) {
+      return yellow += amount;
+    }
+    int RedTotal() {
+      return red;
+    }
+    int BlueTotal() {
+      return blue;
+    }
+    int YellowTotal() {
+      return yellow;
+    }
+    int BagTotal() {
+      return red + blue + yellow;
+    }
+
+  private:
+    int red;
+    int blue;
+    int yellow;
+};
+
+//add class definitions above this line   
+
+int main() {
+  
+  //DO NOT EDIT code below this line
+  
+  MarbleBag bag(12, 8, 19);
+  bag.AddRed(4);
+  bag.AddBlue(12);
+  bag.AddYellow(-1);
+  bag.AddBlue(-3);
+  cout << "There are " << bag.RedTotal() << " red marbles." << endl;
+  cout << "There are " << bag.BlueTotal() << " blue marbles." << endl;
+  cout << "There are " << bag.YellowTotal() << " yellow marbles." << endl;
+  cout << "There are " << bag.BagTotal() << " total marbles." << endl;
+
+  //DO NOT EDIT code above this line
+  
+  return 0;
+  
+}
+
+-----------------------------------------------------
+question 3
+
+#include <iostream>
+using namespace std;
+
+//add class definitions below this line
+
+class Mass {
+  public:
+    Mass(double mg, double g, double kg) {
+      milligrams = mg;
+      grams = g;
+      kilograms = kg;
+    }
+    double TotalWeight() {
+      return ((milligrams / 1000) + grams + (kilograms * 1000));
+    }
+    string CompareWeight(Mass m) {
+      double mass1 = TotalWeight();
+      double mass2 = m.TotalWeight();
+      if (mass1 > mass2) {
+        return "The first object is heavier.";
+      }
+      else if (mass2 > mass1) {
+        return "The second object is heavier.";
+      }
+      else {
+        return "The two objects weigh the same.";
+      }
+    }
+  
+  private:
+    double milligrams;
+    double grams;
+    double kilograms;
+};
+
+//add class definitions above this line   
+
+int main() {
+  
+  //DO NOT EDIT the code below
+
+  Mass m1(800, 17, 3);
+  Mass m2(730, 38, 2);
+  cout << m1.TotalWeight() << endl;
+  cout << m2.TotalWeight() << endl;
+  cout << m1.CompareWeight(m2) << endl;
+
+  //DO NOT EDIT the code above
+  
+  return 0;
+  
+}
+
+----------------------------------------------------
+question 2
+
+#include <iostream>
+using namespace std;
+
+//add class definitions below this line
+
+class CelestialBody {
+  public:
+    CelestialBody(string n, double diam, double dist, int m) {
+      name = n;
+      diameter = diam;
+      distance = dist;
+      moons = m;
+    }
+    string CloserToSun(CelestialBody cb) {
+      if (distance < cb.distance) {
+        return name;
+      }
+      else {
+        return cb.name;
+      }
+    }
+    
+  private:
+    string name;
+    double diameter;
+    double distance;
+    int moons;
+};
+
+//add class definitions above this line   
+
+int main() {
+  
+  //DO NOT EDIT the code below
+  
+  CelestialBody mercury("Mercury", 4879.4, 57909000, 0);
+  CelestialBody venus("Venus", 12103.6, 108160000, 0);
+  cout << mercury.CloserToSun(venus) << endl;
+
+  //DO NOT EDIT the code above
+  
+  return 0;
+  
+}
+
+----------------------------------------------
+question 1
+
+#include <iostream>
+using namespace std;
+
+//add class definitions below this line
+
+class CelestialBody {
+  public:
+    CelestialBody(string n, double diam, double dist, int m) {
+      name = n;
+      diameter = diam;
+      distance = dist;
+      moons = m;
+    }
+    double ComparedToEarth() {
+      double earth = 12756.3;
+      double relative_size = diameter / earth;
+      return relative_size;
+    }
+    
+  private:
+    string name;
+    double diameter;
+    double distance;
+    int moons;
+};
+
+//add class definitions above this line   
+
+int main() {
+  
+  CelestialBody planet("Jupiter", 142984, 778360000, 79);
+  
+  //Modify the code below
+  
+  cout << planet.ComparedToEarth() << endl;
+
+  //Modify the code above
+  
+  return 0;
+  
+}
+
+========================================================================================Module 4=========================================================
+
+--------------------------------------week 1------------------------
+question 5
+
+class CardBinder {
+  public:
+    CardBinder() {}
+  
+    int GetGold() {
+      return gold_card;
+    }
+  
+    int GetSilver() {
+      return silver_card;
+    }
+  
+    int GetTotal() {
+      return gold_card + silver_card;
+    }
+  
+    void AddGold(int amount) {
+      if (amount <= 0) {
+        cout << "You cannot add a negative or 0 amount of cards." << endl;
+      }
+      else if (amount + gold_card + silver_card > 20) {
+        cout << "You do not have enough binder room." << endl;
+      }
+      else {
+        gold_card += amount;
+      }
+    }
+  
+    void RemoveGold(int amount) {
+      if (amount <= 0) {
+        cout << "You cannot remove a negative or 0 amount of cards." << endl;
+      }
+      else if (gold_card - amount < 0) {
+        cout << "You do not have enough gold cards to remove." << endl;
+      }
+      else {
+        gold_card -= amount;
+      }
+    }
+  
+    void AddSilver(int amount) {
+      if (amount <= 0) {
+        cout << "You cannot add a negative or 0 amount of cards." << endl;
+      }
+      else if (amount + gold_card +silver_card > 20) {
+        cout << "You do not have enough binder room." << endl;
+      }
+      else {
+        silver_card += amount;
+      }
+    }
+  
+    void RemoveSilver(int amount) {
+      if (amount <= 0) {
+        cout << "You cannot remove a negative or 0 amount of cards." << endl;
+      }
+      else if (silver_card - amount < 0) {
+        cout << "You do not have enough silver cards to remove." << endl;
+      }
+      else {
+        silver_card -= amount;
+      }
+    }
+  
+  private:
+    int gold_card = 0;
+    int silver_card = 0;
+};
+
+-------------------------------------------------------
+question 4
+
+class Atm {
+  public:
+    Atm() {}
+  
+    double GetMoney() {
+      return money;
+    }
+  
+    void Deposit(double amount) {
+      if (amount <= 0) {
+        cout << "You cannot deposit a negative or 0 amount of money." << endl;
+      }
+      else {
+        money += amount;
+      }
+    }
+  
+    void Withdraw(double amount) {
+      if (amount <= 0) {
+        cout << "You cannot withdraw a negative or 0 amount of money." << endl;
+      }
+      else if (amount > money) {
+        cout << "You do not have enough funds to withdraw that amount." <<endl;
+      }
+      else {
+        money -= amount;
+      }
+    }
+  
+  private:
+    double money = 0;
+};
+
+-----------------------------------------------------
+question 3
+
+  public:
+    Song(string ar, string t, string al) {
+      artist = ar;
+      title = t;
+      album = al;
+    }
+  
+    string GetArtist() {
+      return artist;
+    }
+
+    void SetArtist(string new_artist) {
+      artist = new_artist;
+    }
+
+    string GetTitle() {
+      return title;
+    }
+
+    void SetTitle(string new_title) {
+      title = new_title;
+    }
+
+    string GetAlbum() {
+      return album;
+    }
+
+    void SetAlbum(string new_album) {
+      album = new_album;
+    }
+
+    int GetPlayCount() {
+      return play_count;
+    }
+
+    double GetMoneyEarned() {
+      return money_earned;
+    }
+
+    double GetPayRate() {
+      return pay_rate;
+    }
+
+    void Play(int count) {
+      for (int i = 0; i < count; i++) {
+        UpdatePlayCount();
+        UpdateMoneyEarned();
+      }
+    }
+  
+    void Stats() {
+      cout << artist << endl;
+      cout << title << endl;
+      cout << album << endl;
+      cout << play_count << endl;
+      cout << pay_rate << endl;
+      cout << money_earned << endl;
+    }
+
+----------------------------------------------------
+question 2
+
+class Watch {
+  public:
+    Watch(string mf, string mo, int d, int w, string mt) {
+      manufacturer = mf;
+      model = mo;
+      diameter = d;
+      water_resistance = w;
+      material = mt;
+    }
+  
+    string GetManufacturer() {
+      return manufacturer;
+    }
+
+    void SetManufacturer(string new_manufacturer) {
+      manufacturer = new_manufacturer;
+    }
+
+    string GetModel() {
+      return model;
+    }
+
+    void SetModel(string new_model) {
+      model = new_model;
+    }
+
+    int GetDiameter() {
+      return diameter;
+    }
+
+    void SetDiameter(int new_diameter) {
+      diameter = new_diameter;
+    }
+
+    int GetWaterResistance() {
+      return water_resistance;
+    }
+
+    void SetWaterResistance(int new_water_resistance) {
+      water_resistance = new_water_resistance;
+    }
+
+    string GetMaterial() {
+      return material;
+    }
+
+    void SetMaterial(string new_material) {
+      material = new_material;
+    }
+
+    void Summary() {
+      cout << "Manufacturer: " << manufacturer << endl;
+      cout << "Model: " << model << endl;
+      cout << "Diameter: " << diameter << " mm" << endl;
+      cout << "Water Resistance: " << water_resistance << " m" << endl;
+      cout << "Material: " << material << endl;
+    }
+  
+  private:
+    string manufacturer;
+    string model;
+    int diameter;
+    int water_resistance;
+    string material;
+};
+
+----------------------------------------------
+question 1
+
+class Fruit {
+  public:
+    Fruit(string n, string c) {
+      name = n;
+      color = c;
+    }
+  
+    string GetName() {
+      return name;
+    }
+  
+    void SetName(string new_name) {
+      name = new_name;
+    }
+  
+    string GetColor() {
+      return color;
+    }
+  
+    void SetColor(string new_color) {
+      color = new_color;
+    }
+  
+  private:
+    string name;
+    string color;
+};
+
+--------------------------------------week 2------------------------
+question 5
+
+//DO NOT EDIT/////////////////////////////////////////////////
+class CardHolder : public Person {                          //
+  public:                                                   //
+    CardHolder(string n, string a, int an) : Person(n, a) { //
+      account_number = an;                                  //
+      balance = 0;                                          //
+      credit_limit = 5000;                                  //
+    }                                                       //
+//////////////////////////////////////////////////////////////
+  
+    int GetAccountNumber() {
+      return account_number;
+    }
+
+    void SetAccountNumber(int new_account_number) {
+      account_number = new_account_number;
+    }
+
+    double GetBalance() {
+      return balance;
+    }
+
+    void SetBalance(double new_balance) {
+      balance = new_balance;
+    }
+
+    int GetCreditLimit() {
+      return credit_limit;
+    }
+
+    void SetCreditLimit(int new_credit_limit) {
+      credit_limit = new_credit_limit;
+    }
+
+    void Sale(double price) {
+      balance += price;
+    }
+
+    void Payment(double amount) {
+      balance -= amount;
+    }
+  
+  private:
+    int account_number;
+    double balance;
+    int credit_limit;
+};
+
+//DO NOT EDIT/////////////////////////////////////////////////////////////
+class PlatinumClient : public CardHolder {                              //
+  public:                                                               //
+    PlatinumClient(string n, string a, int an) : CardHolder(n, a, an) { //
+      cash_back = 0.02;                                                 //
+      rewards = 0;                                                      //
+    }                                                                   //
+//////////////////////////////////////////////////////////////////////////
+
+    double GetCashBack() {
+      return cash_back;
+    }
+
+    void SetCashBack(double new_cash_back) {
+      cash_back = new_cash_back;
+    }
+
+    double GetRewards() {
+      return rewards;
+    }
+
+    void SetRewards(double new_rewards) {
+      rewards = new_rewards;
+    }
+
+    void Sale(double price) {
+      rewards += cash_back * price;
+      SetBalance(GetBalance() + price);
+    }
+  
+  private:
+    double cash_back;
+    double rewards;
+};
+
+-------------------------------------------------------
+question 4
+
+//DO NOT EDIT/////////////////////
+class Cash : public PiggyBank { //
+//////////////////////////////////
+  public:
+    Cash(int o, int f, int tn, int tw) : PiggyBank(o, f, tn, tw) {}
+  
+    void DisplayBills() {
+      cout << "One-dollar bill: " << GetOnes() << endl;
+      cout << "Five-dollar bill: " << GetFives() << endl;
+      cout << "Ten-dollar bill: " << GetTens() << endl;
+      cout << "Twenty-dollar bill: " << GetTwenties() << endl;
+    }
+  
+    void DisplayCashTotal() {
+      cout << "Total amount: "; 
+      cout << GetOnes() + GetFives() * 5 + GetTens() * 10 + GetTwenties() * 20;
+      cout << endl;
+    }
+};
+
+-----------------------------------------------------
+question 3
+
+class Child : public Parent2 {
+  public:
+    string Identify() {
+      return "This function is called from Child";
+    }
+  
+    string Identify2() {
+      return Parent2::Identify();
+    }
+  
+    string Identify3() {
+      return Parent1::Identify();
+    }
+};
+
+----------------------------------------------------
+question 2
+
+//DO NOT EDIT////////////////////
+class BlogPost : public Book { //
+/////////////////////////////////
+  public:
+    BlogPost(string t, string a, string g, string w, int wc, int pv) : Book(t, a, g) {
+      website = w;
+      word_count = wc;
+      page_views = pv;
+    }
+  
+    string GetWebsite() {
+      return website;
+    }
+
+    void SetWebsite(string new_website) {
+      website = new_website;
+    }
+
+    int GetWordCount() {
+      return word_count;
+    }
+
+    void SetWordCount(int new_word_count) {
+      word_count = new_word_count;
+    }
+
+    int GetPageViews() {
+      return page_views;
+    }
+
+    void SetPageViews(int new_page_views) {
+      page_views = new_page_views;
+    }
+
+  private:
+    string website;
+    int word_count;
+    int page_views;
+};
+
+----------------------------------------------
+question 1
+
+//DO NOT EDIT//////////////////////////////
+class Satellite : public CelestialBody { //
+///////////////////////////////////////////
+  public: 
+    Satellite(double s, double m, string c, string n, string hp) : CelestialBody(s, m, c, n) {
+      host_planet = hp;
+    }
+
+    string GetHostPlanet() {
+      return host_planet;
+    }
+
+    void SetHostPlanet(string new_host_planet) {
+      host_planet = new_host_planet;
+    }
+  
+  private: 
+    string host_planet;
+};
+
+//DO NOT EDIT///////////////////////////
+class Planet : public CelestialBody { //
+////////////////////////////////////////
+  public: 
+    Planet(double s, double m, string c, string n, string hs) : CelestialBody(s, m, c, n) {
+      host_star = hs;
+    }
+
+    string GetHostStar() {
+      return host_star;
+    }
+
+    void SetHostStar(string new_host_star) {
+      host_star = new_host_star;
+    }
+  
+  private: 
+    string host_star;
+};
+
+--------------------------------------week 3------------------------
+question 5
+
+class Substitute : public Words {
+  public:
+    Substitute(string s2) : Words(s2) {
+      input_string = s2;
+    }
+  
+    string SubstituteChar() {
+      string sub;
+      if (input_string.length() < 5) {
+        return "Not enough characters";
+      }
+      else {
+        for (int i = 0; i < input_string.length(); i++) {
+          if (i == 4) {
+            sub += "HELLO";
+          }
+          else {
+            sub += input_string.at(i);
+          }
+        }
+      }
+      return sub;
+    }
+  
+  private:
+    string input_string;
+};
+
+-------------------------------------------------------
+question 4
+
+class Median {
+  public:
+    double CalculateMedian(int n1, int n2) {
+      return (double) (n1 + n2) / 2;
+    }
+  
+    double CalculateMedian(int n1, int n2, int n3) {
+      vector<int> nums = {n1, n2, n3};
+      sort(nums.begin(), nums.end());
+      return nums.at(1);
+    }
+
+    double CalculateMedian(int n1, int n2, int n3, int n4) {
+      vector<int> nums = {n1, n2, n3, n4};
+      sort(nums.begin(), nums.end());
+      return (double) (nums.at(1) + nums.at(2)) / 2;
+    }
+
+    double CalculateMedian(int n1, int n2, int n3, int n4, int n5) {
+      vector<int> nums = {n1, n2, n3, n4, n5};
+      sort(nums.begin(), nums.end());
+      return nums.at(2);
+    }
+};
+
+-----------------------------------------------------
+question 3
+
+class Conversion : public Temperature {
+  public:
+    double ConvertTo(char unit, double temp) {
+      if (unit == 'C' || unit == 'c') {
+        return Celsius(temp);
+      } 
+      else if (unit == 'F' || unit == 'f') {
+        return Fahrenheit(temp);
+      }
+      return -0.0001;
+    }
+  
+  private:
+    double Celsius(double temp) {
+      return (temp - 32) / 1.8;
+    }
+  
+    double Fahrenheit(double temp) {
+      return temp * 1.8 + 32;
+    }
+};
+
+----------------------------------------------------
+question 2
+
+class Airplane : public Vehicle {
+  public:
+    Airplane(double s) {
+      speed = s;
+    }
+  
+    void Distance(double time) {
+      cout << speed * time << endl;
+    }
+    
+  private:
+    double speed;
+};
+
+----------------------------------------------
+question 1
+
+class VectorAddSix : public VectorAddThree {
+  public:
+    vector<int> Add() {
+      nums.push_back(num1);
+      nums.push_back(num2);
+      nums.push_back(num3);
+      nums.push_back(num4);
+      nums.push_back(num5);
+      nums.push_back(num6);
+      return nums;
+    }
+  
+  protected:
+    int num4 = 4;
+    int num5 = 5;
+    int num6 = 6;
+  
+  private:
+    vector<int> nums;
+};
+
+--------------------------------------week 4------------------------
+question 5
+
+    static bool CompareStudents(Student s1, Student s2) {
+      if ((s1.name == s2.name) &&
+          (s1.student_id == s2.student_id)) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+
+-------------------------------------------------------
+question 4
+
+class Person {
+  public:
+    static string name;
+  
+    static string GetName() {
+      return name;
+    }
+};
+
+-----------------------------------------------------
+question 3
+
+struct Student {
+  string name = "Amy";
+  int age = 18;
+  string major = "Physics";
+};
+
+----------------------------------------------------
+question 2
+
+enum seasons {winter = 1, spring, summer, fall};
+
+----------------------------------------------
+question 1
+
+class Hello {
+  public:
+    void PrintHello() {
+      cout << "Hello" << endl;
+    }
+};
+
